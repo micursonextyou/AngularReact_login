@@ -1,0 +1,14 @@
+<mat-card-content>
+    <div class="popup" id="popup">
+        <div class="popup-inner">
+            <div class="popup__photo">
+                <img src="{{data.imageUrl}}" alt="">
+            </div>
+            <div class="popup__text">
+                <h1>{{data.nombre}}</h1>
+                <p>{{data.descripcion}}</p>
+            </div>
+            <a class="popup__close" href="#" (click)="onNoClick()">X</a>
+        </div>
+    </div>
+</mat-card-content>

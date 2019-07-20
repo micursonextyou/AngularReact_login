@@ -1,0 +1,36 @@
+<!------------------------------ barra de catalogo ---------------------------------------------->
+<div class="contenedor-catalogo">
+    <div class="row cab-cat-ser">
+        <div class="col l3 centrar">
+            <h3>Catalogo</h3>
+
+        </div>
+        <div class="col l3 push-l6 ">
+
+            <div class="row">
+                <div class="col l12">
+                    <label for="buscar">¿Que estas buscando?</label>
+                    <input type="search" name="filterProducto" id="buscar" [(ngModel)]="filterProducto" placeholder="Articulo......">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!------------------------------ fin barra de catalogo ---------------------------------------------->
+    <!------------------------------ cuerpo de catalogo ------------------------------------------------->
+    <div class="cat-cuerpo ">
+        <div class="row ">
+            <div class="col l3 " *ngFor="let producto of productos | filter:filterProducto">
+                <app-articulo [producto]='producto'></app-articulo>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!------------------------------ fin fin cuerpo de catalogo ----------------------------------------->
+</div>

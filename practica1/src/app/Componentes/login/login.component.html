@@ -1,0 +1,23 @@
+<div class="contenedor-formulario">
+
+    <div id="glass" class="formulario">
+        <form [formGroup]="loginform" (ngSubmit)="onLogin()">
+            <div class='titulo'>
+                <h1>Iniciar Session</h1>
+            </div>
+            <div>
+                <input type="email" formControlName="email" placeholder="Ingrese Correo">
+            </div>
+
+            <div>
+                <input type="password" formControlName="password" placeholder="Ingrese clave">
+            </div>
+
+            <div id="btn">
+                <button [disabled]="loginform.invalid" type="submit">Ingresar</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>

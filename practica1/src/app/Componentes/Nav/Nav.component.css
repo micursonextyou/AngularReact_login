@@ -1,0 +1,46 @@
+.nav-wrapper {
+    border-color: #fff #ccc #999 #eee;
+    background: #c1c1c1;
+    background: linear-gradient(#f5f5f5, #c1c1c1);
+}
+
+.cfi {
+    color: #555;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    border-width: 1px;
+    margin: 14px;
+}
+
+.iconos {
+    margin-left: 70%;
+}
+
+nav a:hover,
+nav a:focus {
+    outline: 0;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+    background: #fac754;
+    background: linear-gradient(#fac754, #f8ac00);
+}
+
+.cfi:hover {
+    color: #f8ac00;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+    transition-duration: 300ms;
+}
+
+nav li:first-child a {
+    border-left: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.brand-logo {
+    margin-left: .5em;
+    color: #f8ac00;
+    text-shadow: black 2px 2px 2px;
+}

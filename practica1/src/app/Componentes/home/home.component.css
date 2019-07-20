@@ -1,0 +1,29 @@
+#Contenedor {
+    width: 100%;
+    background-image: url('../../../assets/images/main-fondo.jpg');
+    display: flex;
+    justify-content: center;
+}
+
+#cuerpo {
+    width: 80%;
+    display: block;
+}
+
+#cabecera {
+    width: 100%;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+}
+
+#barra,
+#comp-catalogo {
+    width: 100%;
+}
+
+#contenido {
+    margin-top: 10px;
+}
