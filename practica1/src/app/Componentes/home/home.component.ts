@@ -9,13 +9,19 @@ import { Component, OnInit, ViewChild, Input } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
- 
+ public contador:number=0;
   
 
   constructor() { }
 
   ngOnInit() {
           
+  }
+  pasar(e){
+    this.contador+=e;
+    console.log(this.contador);
+    
+
   }
 
 }

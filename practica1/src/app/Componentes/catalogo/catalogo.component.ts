@@ -1,8 +1,9 @@
 
 
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Output,EventEmitter } from '@angular/core';
 import{DataproductosService} from '../../Servicios/dataproductos.service'
 import { ComprasService } from 'src/app/Servicios/compras.service';
+
 
 
 
@@ -16,8 +17,10 @@ export class CatalogoComponent implements OnInit {
   public productos=[];  
   public producto="";
   public filterProducto="";
-  public contador=0;
+  public contador:number;
   public filtro="";
+  @Output() sendContador= new EventEmitter(); 
+
   
 
   constructor(private items:DataproductosService) { }
@@ -28,11 +31,13 @@ export class CatalogoComponent implements OnInit {
 
            
     });
-    console.log(this.filtro);
+    console.log(this.contador);
     
   }
-  changed(event){
-    this.filtro=event;
+  pasar(e){
+    this.contador=e;
+    this.sendContador.emit(this.contador);
+    
   }
 
   

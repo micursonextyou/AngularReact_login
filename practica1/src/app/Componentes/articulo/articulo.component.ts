@@ -1,5 +1,5 @@
 import { ProductoInterface } from './../../Interfaces/producto';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ComprasService } from 'src/app/Servicios/compras.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {PopupComponent} from '../popup/popup.component';
@@ -15,6 +15,10 @@ export class ArticuloComponent implements OnInit {
   private info:string;
   public iteminfo='';
   public lansar=false;
+  @Output()addnumero =new EventEmitter();
+
+
+
 
   constructor(private compras:ComprasService,public dialog: MatDialog) { }
 
@@ -24,6 +28,7 @@ export class ArticuloComponent implements OnInit {
   addProducto(item){
     if(this.contador>0){
         this.compras.nuevoItem(item,this.contador);
+        this.addnumero.emit(this.contador);
     }
     
   }

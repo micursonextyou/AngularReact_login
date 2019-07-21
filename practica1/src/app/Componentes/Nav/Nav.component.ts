@@ -10,8 +10,9 @@ import { AuthServiciosService } from 'src/app/Servicios/AuthServicios.service';
   styleUrls: ['./Nav.component.css']
 })
 export class NavComponent implements OnInit {
-  public cuenta='';    
+ 
   public item="";
+  @Input() contador='';
 
   constructor(private log:AuthServiciosService,private router:Router) { }
     

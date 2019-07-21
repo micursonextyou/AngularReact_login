@@ -1,5 +1,5 @@
 .contenedor-formulario {
-    background-image: url('../../../assets/images/fondo2.jpg');
+    background-image: url('../../../assets/images/login-fondo.jpg');
     background-size: cover;
     margin: 0px;
     margin-top: -20px;
@@ -12,10 +12,10 @@
 #glass {
     background-color: rgba(255, 255, 255, .3);
     backdrop-filter: blur(6px);
-    width: 22em;
-    height: 16em;
-    margin-left: 30%;
-    padding: 3px 0px 0px 55px;
+    width: 27em;
+    height: 20em;
+    margin-left: 33rem;
+    padding: 3px 40px 0 55px;
 }
 
 h1 {

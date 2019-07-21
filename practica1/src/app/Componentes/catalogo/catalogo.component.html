@@ -24,7 +24,7 @@
     <div class="cat-cuerpo ">
         <div class="row ">
             <div class="col l3 " *ngFor="let producto of productos | filter:filterProducto">
-                <app-articulo [producto]='producto'></app-articulo>
+                <app-articulo [producto]='producto' (addnumero)='pasar($event)'></app-articulo>
 
             </div>
         </div>
