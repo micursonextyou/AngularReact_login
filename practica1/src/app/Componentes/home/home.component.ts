@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
   pasar(e){
     this.contador+=e;
-    console.log(this.contador);
+    
     
 
   }
