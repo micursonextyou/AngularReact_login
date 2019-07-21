@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
     this.loginform.reset(); 
     
   }
+  
   onLogin():void{
    console.log(this.loginform.value.email,this.loginform.value.password);
    

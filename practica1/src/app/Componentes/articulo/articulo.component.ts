@@ -25,6 +25,7 @@ export class ArticuloComponent implements OnInit {
     if(this.contador>0){
         this.compras.nuevoItem(item,this.contador);
     }
+    
   }
   Informacion(item){
     

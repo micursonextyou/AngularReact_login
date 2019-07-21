@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ComprasService } from 'src/app/Servicios/compras.service';
+import { Route, Router } from '@angular/router';
+import { AuthServiciosService } from 'src/app/Servicios/AuthServicios.service';
 
 
 @Component({
@@ -8,13 +10,20 @@ import { ComprasService } from 'src/app/Servicios/compras.service';
   styleUrls: ['./Nav.component.css']
 })
 export class NavComponent implements OnInit {
-    
-  public cuenta="";
+  public cuenta='';    
+  public item="";
 
-  constructor(private carrito:ComprasService) { }
+  constructor(private log:AuthServiciosService,private router:Router) { }
+    
 
   ngOnInit() {
-    this.cuenta=this.carrito.getTotalArticulos();
-  }
+   }
+
+   salir(){
+     this.log.onLogOut();
+     this.router.navigate(['login']);
+     console.log("dsadad");
+   }
+
 
 }

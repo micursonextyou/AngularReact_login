@@ -1,3 +1,52 @@
-<p>
-  carritocompras works!
-</p>
+<div id="Contenedor">
+    <div id="cuerpo" class="centrar">
+        <div id="cabecera">
+            <nav-bar id="barra"></nav-bar>
+        </div>
+        <div id="contenido" class="centrar">
+            <div>
+
+
+                <div id="contenido" class="centrar">
+                    <div class="contenedor-compras">
+                        <div class="row tit">
+                            <h3>Carrito de compras</h3>
+                        </div>
+                        <div class="row">
+
+                            <div class="col l5 lista">
+                                <div class="" *ngFor=" let articulo of Items">
+                                    <app-itemcarrito [articulo]="articulo"></app-itemcarrito>
+                                </div>
+                            </div>
+
+                            <div class="col l5 push-l2">
+                                <div class="total ">
+                                    <div class="row ">
+                                        <div class="col l12 ">
+                                            <div class="row">
+                                                <h3> <span>Total $:<span>  {{ValorTotal}}</span></span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">
+                                        <div class="col l2 push-l2 ">
+
+                                            <button mat-button (click)="confirm()">Comprar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>

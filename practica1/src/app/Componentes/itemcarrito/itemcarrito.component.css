@@ -1,0 +1,31 @@
+span {
+    color: black;
+    text-shadow: gray 1px 1px 2px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.celda {
+    width: 300px;
+    max-height: 110px;
+    padding: 0;
+    margin-left: 59px;
+}
+
+.datos-left {
+    float: left;
+    height: 70px;
+    width: 70px;
+    margin-top: -10px;
+}
+
+.datos-rigth {
+    float: right;
+    height: 60px;
+    width: 250px;
+    padding-left: 50px;
+}
+
+.celda {
+    border-bottom: gray 1px solid;
+}

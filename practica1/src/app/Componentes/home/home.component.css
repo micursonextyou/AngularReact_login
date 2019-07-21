@@ -3,6 +3,7 @@
     background-image: url('../../../assets/images/main-fondo.jpg');
     display: flex;
     justify-content: center;
+    min-height: 700px;
 }
 
 #cuerpo {
@@ -15,7 +16,7 @@
 }
 
 .centrar {
-    display: flex;
+    display: block;
     justify-content: center;
 }
 

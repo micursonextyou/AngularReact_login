@@ -1,3 +1,4 @@
+import { CarritocomprasComponent } from './../Componentes/carritocompras/carritocompras.component';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', component: AppComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'carrito', component: CarritocomprasComponent }
   
   
 
@@ -25,4 +27,6 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class AppRoutingModule { }
-export const routingComponents=[LoginComponent,HomeComponent,PopupComponent];
+export const routingComponents=[LoginComponent,HomeComponent,CarritocomprasComponent];
+
+

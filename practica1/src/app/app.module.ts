@@ -33,6 +33,8 @@ import { MaterialModule } from './material-modulo';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { EncajaComponent } from './Componentes/encaja/encaja.component';
 import { ArticuloComponent } from './Componentes/articulo/articulo.component';
+import { ItemcarritoComponent } from './Componentes/itemcarrito/itemcarrito.component';
+import { CarritocomprasComponent } from './Componentes/carritocompras/carritocompras.component';
 
 
 
@@ -47,6 +49,9 @@ import { ArticuloComponent } from './Componentes/articulo/articulo.component';
       PopupComponent,
       EncajaComponent,
       ArticuloComponent,
+      ItemcarritoComponent,
+      CarritocomprasComponent
+      
       
    ],
    imports: [

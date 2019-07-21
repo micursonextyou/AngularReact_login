@@ -19,7 +19,8 @@ constructor(private AFS:AngularFirestore) {
 
 private productoCollection:AngularFirestoreCollection<ProductoInterface>;
 private productos: Observable<ProductoInterface[]>;  
-private item:ProductoInterface;
+private ItemDoc:AngularFirestoreDocument<ProductoInterface>;
+private Item:Observable<ProductoInterface>;
 
 getProductos(){
   return this.productos=this.productoCollection.snapshotChanges().pipe(map(changes=>{
@@ -30,7 +31,11 @@ getProductos(){
        });
   }));
 }
-UpDateProductos(){
+UpDateProductos(producto:ProductoInterface):void{
+   let id=producto.id;
+   this.ItemDoc=this.AFS.doc<ProductoInterface>(`Productos/${id}`);
+   this.ItemDoc.update(producto);
+
   
 }
 
