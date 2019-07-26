@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.contenedor-catalogo{
+    background-image: url("../../assets/images/main-fondo.jpg"); 
+  background-color: #cccccc;
+  
+  height:120vh;
+  background-position: center; 
+  
+  background-size: cover; 
+}
+.Catalogo{ 
+  border-color: #fff #ccc #999 #eee;
+  background: #c1c1c1;
+    background: linear-gradient(#f5f5f5, #c1c1c1);
+
+  min-height: 500px;
+  max-height: 700px;
+}
+.buscador {  
+  border-color: #fff #ccc #999 #eee;
+  background: #c1c1c1;
+    background: linear-gradient(#f5f5f5, #c1c1c1);
+  border-bottom: #f8ac00 1px solid;
+  height: 80px;         
+}
+
+input[type="search"]{
+  width: 210px;
+  height: 1.2em;
+  background: #ffffff;
+  padding-left: 10px;
+  border-radius: 15em;
+  font-size: 15px;
+  color:#f8ac00;
+  font-weight: bold;
+  text-shadow: #000 1px 1px 2px;
+}
+.bodega{
+  margin: 0;
+  margin-top: 20px;
+}
+span{
+  color:#f8ac00;
+  font-size: 1em;
+  font-weight: bold;
+  text-shadow: #000 1px 1px 2px;
+}
+h5{
+  color:;
+  text-shadow: #000 1px 1px 2px;
+  font-weight: bold;
+}
+.listaproductos{
+  overflow-y: scroll;
+  width: 95%;
+  margin: 5px auto;
+  border:#f8ac00 1px solid;
+  height: 500px;
+  height: 500px;
+  
+}
