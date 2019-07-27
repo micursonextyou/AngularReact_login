@@ -1,16 +1,20 @@
-import firebase from 'firebase/app';
-import 'firebase/app';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 import 'firebase/firestore';
 
-firebase.initializeApp({
-    apiKey: "AIzaSyBDEu4FLhXbjO0_jFZ2Q2N58BTCOobu3i8",
-    authDomain: "usruarios.firebaseapp.com",
-    databaseURL: "https://usruarios.firebaseio.com",
-    projectId: "usruarios",
-    storageBucket: "usruarios.appspot.com",
-    messagingSenderId: "16171378404",
-    appId: "1:16171378404:web:51da9a7199941e17"
+
+
+
+const db=firebase.initializeApp({
+    apiKey:process.env.REACT_APP_FIREBASE_KEY,
+    authDomain:process.env.REACT_APP_FIREBASE_DOMAIN,
+    databaseURL:process.env.REACT_APP_FIREBASE_DATABASE,
+    projectId:process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket:process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId:process.env.REACT_APP_FIREBASE_SENDER_ID,
+    
 });
-let db=firebase.firestore();
-//db.settings({timestampsInSnapshots:true});
+
+
  export default db;
+ 

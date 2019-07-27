@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import Nav  from '../Nav/nav.component.js';
 import Item from '../item/item.componet.js';
 
-class Carrito extends React.Component{
+export default class Carrito extends React.Component {
 
     render(){
         return(
@@ -44,4 +44,3 @@ class Carrito extends React.Component{
 
 
 }
-export default Carrito
