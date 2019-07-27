@@ -1,11 +1,12 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import '../articulo/articulo.componet.css';
 import {Link} from 'react-router-dom';
 import { log } from 'util';
+import {CarritoConsumer} from '../../CONTEXT/carritoContect.js';
 
 
 
-    class Articulo extends React.Component{
+class Articulo extends React.Component{
          constructor(props){
              super(props);
          
@@ -18,15 +19,15 @@ import { log } from 'util';
 
              }
          }
-         hanbleimp=e=>{
-                
-                
+         handleChange=e=>{
+             this.product.cantidad=e.target.value;
+
          }
-         handleChange=e=>{           
-           this.product.cantidad=e.target.value ;
+                
+                
          
-        
-            }
+        // const [car , setcar] = useContext(CarritoContext);
+         
          
         render(){
         return(
@@ -48,8 +49,12 @@ import { log } from 'util';
                                 <div className="col l2 ">                            
                                     <a className="btn-floating light-blue darken-3  waves-effect waves-light red"><i className="material-icons">book</i></a>
                                 </div>
-                                <div className="col l2 push-l1 ">   
-                                    <a className="btn-floating yellow darken-1  waves-effect waves-light red" onClick={(e)=>this.props.Agrecarcompra(e,this.product)} ><i className="material-icons">add</i></a>
+                                <div className="col l2 push-l1 ">  
+                                    <CarritoConsumer> 
+                                    {value=>{ return(
+                                        <a className="btn-floating yellow darken-1  waves-effect waves-light red" onClick={()=>{value.addToCard(this.product)}} ><i className="material-icons">add</i></a>
+                                        )}}
+                                    </CarritoConsumer>
                                 </div>
                                 <div className="col l5 push-l3">
                                     <input className="yyy" type ="number" name="cantidad" min="1" max={this.product.stock}   onChange={this.handleChange}   />
@@ -68,4 +73,4 @@ import { log } from 'util';
 
 
 }
-export default Articulo
+export default Articulo;

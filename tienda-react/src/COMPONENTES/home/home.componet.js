@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom';
 import Nav  from '../Nav/nav.component.js';
 import ListaArticulos from '../home/listaArticulos';
 
+
+
 class Home extends React.Component{
 
     state={
@@ -42,32 +44,35 @@ class Home extends React.Component{
     render(){
 
         return(
+                
 
-            <div className="contenedor-catalogo">
-                <div className="container">
-                    <div>
-                        <Nav />
-                    </div>
-                    <div className="row bodega">
-                        <div className="col l12">
-                            <div className="row buscador">
-                                <div className="col l4">
-                                    <h5>La bodega</h5>
+                    <div className="contenedor-catalogo">
+                        <div className="container">
+                            <div>
+                                <Nav />
+                            </div>
+                            <div className="row bodega">
+                                <div className="col l12">
+                                    <div className="row buscador">
+                                        <div className="col l4">
+                                            <h5>La bodega</h5>
+                                        </div>
+                                        <div className="col l4 push-l4 ">
+                                            <span >¿Que estas buscando?</span>
+                                            <input type="search" placeholder="Ingrese un articulo" value={this.state.search} onChange={this.handleChange}/>			
+                                        </div>
+                                    </div>		
                                 </div>
-                                <div className="col l4 push-l4 ">
-                                    <span >¿Que estas buscando?</span>
-                                    <input type="search" placeholder="Ingrese un articulo" value={this.state.search} onChange={this.handleChange}/>			
-                                </div>
-                            </div>		
+                                <div className="row Catalogo center">
+                                    <div className="listaproductos">
+                                        <ListaArticulos data={this.state.productos}  clave={this.state.search}/>                                
+                                    </div>  
+                                </div>	
+                            </div>
                         </div>
-                        <div className="row Catalogo center">
-                            <div className="listaproductos">
-                                <ListaArticulos data={this.state.productos} Agrecarcompra={this.Agrecarcompra} clave={this.state.search}/>                                
-                            </div>  
-                        </div>	
                     </div>
-                </div>
-            </div>
+               
+                    
         )
     }
 

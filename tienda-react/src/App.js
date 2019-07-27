@@ -8,15 +8,16 @@ import Home from './COMPONENTES/home/home.componet.js';
 import Carrito from './COMPONENTES/carrito/carrito.componet.js';
 import {AuthProvider} from './SERVICIOS/autenticar.js';
 import PrivateRoute from './SERVICIOS/privateRouter'
-
-
+import {CarritoProvider} from './CONTEXT/carritoContect.js';
 
 
 function App() {
 
     
   return (
+    <CarritoProvider>
       <AuthProvider>
+     
         <BrowserRouter>
             <Switch>
                 
@@ -25,8 +26,9 @@ function App() {
                 <Route  exact path="/carrito" component={Carrito}/>
 
             </Switch>
-        </BrowserRouter>
+        </BrowserRouter>      
       </AuthProvider>  
+      </CarritoProvider>
     
   );
 }

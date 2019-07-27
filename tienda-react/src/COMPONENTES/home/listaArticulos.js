@@ -16,7 +16,7 @@ export default class ListaArticulos extends React.Component{
                 <div className="row">
                     {  filtroArticulos.map((producto)=>{
                         return (
-                              <Articulo Agrecarcompra={this.props.Agrecarcompra} key={producto.id} nombre={producto.data.nombre} imageUrl={producto.data.imageUrl} precio={producto.data.precio} cantidad={producto.data.cantidad}/>  
+                              <Articulo  key={producto.id} nombre={producto.data.nombre} imageUrl={producto.data.imageUrl} precio={producto.data.precio} cantidad={producto.data.cantidad}/>  
                                )
                     })}
                 </div>

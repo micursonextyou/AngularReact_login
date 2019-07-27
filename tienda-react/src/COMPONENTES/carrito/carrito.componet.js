@@ -3,10 +3,13 @@ import '../carrito/carrito.componet.css';
 import {Link} from 'react-router-dom';
 import Nav  from '../Nav/nav.component.js';
 import Item from '../item/item.componet.js';
+import {CarritoConsumer} from '../../CONTEXT/carritoContect.js';
 
-export default class Carrito extends React.Component {
+
+class Carrito extends React.Component {
 
     render(){
+        
         return(
 
                 <div className="contenedor">
@@ -27,7 +30,11 @@ export default class Carrito extends React.Component {
                                     </div>
                                     <div className="col l5 push-l1 total">
                                         <div className="row">
-                                            <h4><span>Total $: aqui valor</span></h4>
+                                            <CarritoConsumer>
+                                                {value=>{ return(
+                                                <h4><span>Total $:  {value}  </span></h4>)
+                                            }}
+                                            </CarritoConsumer>   
                                         </div>
                                         <div className="row center">
                                             <button> Confirmar </button>
@@ -44,3 +51,4 @@ export default class Carrito extends React.Component {
 
 
 }
+export default Carrito
