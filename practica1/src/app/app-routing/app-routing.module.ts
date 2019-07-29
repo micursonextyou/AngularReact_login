@@ -12,8 +12,8 @@ import { PopupComponent } from '../Componentes/popup/popup.component';
 
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'login', component: LoginComponent },
+  //{ path: '', component: AppComponent },
+  { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'carrito', component: CarritocomprasComponent }
   

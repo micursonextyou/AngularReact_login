@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
 
    salir(){
      this.log.onLogOut();
-     this.router.navigate(['login']);
+     this.router.navigate(['']);
      console.log("dsadad");
    }
 
