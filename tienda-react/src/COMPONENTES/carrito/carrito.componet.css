@@ -47,13 +47,14 @@ h4{
     border:#f8ac00 1px solid;
 }
 
-button{
+.button{
     background: #f8ac00;
     width: 10em;
     height: 3em;
+    align-content: center;
+    padding-top: 8px;
+    color: #000;
 }
-button:focus{
-    background: #f8ac00;
-    width: 10em;
-    height: 3em;
+Link {
+  color:#000;
 }

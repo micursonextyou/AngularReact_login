@@ -9,6 +9,7 @@ import Carrito from './COMPONENTES/carrito/carrito.componet.js';
 import {AuthProvider} from './SERVICIOS/autenticar.js';
 import PrivateRoute from './SERVICIOS/privateRouter'
 import {CarritoProvider} from './CONTEXT/carritoContect.js';
+import Modal from './COMPONENTES/popup/popup.component.js';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                 <Route  exact path="/carrito" component={Carrito}/>
 
             </Switch>
+            <Modal/>     
         </BrowserRouter>      
       </AuthProvider>  
       </CarritoProvider>

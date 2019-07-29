@@ -15,6 +15,7 @@ class Articulo extends React.Component{
                  img:props.imageUrl,
                  precio:props.precio,
                  stock:props.cantidad,
+                 descrip:props.leyenda,
                  cantidad:''
 
              }
@@ -46,13 +47,17 @@ class Articulo extends React.Component{
                             </div>
                             <div className="card-action">
                             <div className="row ">
-                                <div className="col l2 ">                            
-                                    <a className="btn-floating light-blue darken-3  waves-effect waves-light red"><i className="material-icons">book</i></a>
+                                <div className="col l2 ">
+                                    <CarritoConsumer>                             
+                                        {value=>{ return(
+                                            <a className="btn-floating light-blue darken-3  waves-effect waves-light red" onClick={()=>{value.OpenPop(this.product)}}><i className="material-icons">book</i></a>
+                                         )}}
+                                    </CarritoConsumer>
                                 </div>
                                 <div className="col l2 push-l1 ">  
                                     <CarritoConsumer> 
-                                    {value=>{ return(
-                                        <a className="btn-floating yellow darken-1  waves-effect waves-light red" onClick={()=>{value.addToCard(this.product)}} ><i className="material-icons">add</i></a>
+                                        {value=>{ return(
+                                            <a className="btn-floating yellow darken-1  waves-effect waves-light red" onClick={()=>{value.addToCard(this.product)}} ><i className="material-icons">add</i></a>
                                         )}}
                                     </CarritoConsumer>
                                 </div>
